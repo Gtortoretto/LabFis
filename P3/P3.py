@@ -11,7 +11,8 @@ import statsmodels.api as sm
 # ΔT = Incerteza de T
 # T2 = Período do pêndulo ao quadrado
 # ΔT2 = Incerteza de T2
-
+# g = Aceleração gravitacional terrestre
+# Δg = Incerteza de g
 # No arquivo Tablela1.txt colocamos os dados para os experimentos na seguinte configuração: Uma coluna com dados, logo sua incerteza separados por um /T (tab)
 
 
@@ -30,6 +31,7 @@ resultado = modelo.fit()
 print (resultado.summary())
 
 coef_lin, coef_ang = resultado.params
+inc_coef_lin, inc_coef_ang = resultado.bse
 reta = coef_ang * X + coef_lin
 
 X = X[:,1] 
@@ -41,3 +43,6 @@ plt.xlabel('L')
 plt.ylabel('T²')
 plt.legend()
 plt.show()
+
+g = 4 *(np.pi**2)/lf(coef_ang, inc_coef_ang)
+print (g)
