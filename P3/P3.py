@@ -15,7 +15,7 @@ import statsmodels.api as sm
 # No arquivo Tablela1.txt colocamos os dados para os experimentos na seguinte configuração: Uma coluna com dados, logo sua incerteza separados por um /T (tab)
 # Na tebela t_10 esta em  
 
-dados = np.loadtxt('Tabela_Ex1.txt')
+dados = np.loadtxt('Tabela1.txt')
 
 L = (np.array([lf(N[0],N[1]) for N in dados])/100)
 t_10 = (np.array([lf(N[2],N[3]) for N in dados]))
