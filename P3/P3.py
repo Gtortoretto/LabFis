@@ -13,7 +13,7 @@ import statsmodels.api as sm
 # ΔT2 = Incerteza de T2
 
 # No arquivo Tablela1.txt colocamos os dados para os experimentos na seguinte configuração: Uma coluna com dados, logo sua incerteza separados por um /T (tab)
-# Na tebela t_10 esta em  
+
 
 dados = np.loadtxt('Tabela_Ex1.txt')
 
