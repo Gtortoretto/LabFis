@@ -45,4 +45,4 @@ plt.legend()
 plt.show()
 
 g = 4 *(np.pi**2)/lf(coef_ang, inc_coef_ang)
-print (g)
+print (f'O valor da aceleração gravitacional é de: {g}')
