@@ -22,6 +22,7 @@ L = (np.array([lf(N[0],N[1]) for N in dados])/100)
 t_10 = (np.array([lf(N[2],N[3]) for N in dados]))
 T = t_10 / 10
 T2 = T ** 2 
+print (L)
 
 Y = T2.astype(np.float64)
 X = sm.add_constant(L.astype(np.float64))
